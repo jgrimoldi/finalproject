@@ -1,0 +1,344 @@
+:root {
+    --bg                 : #f3f3f3;
+    --main-color         : #111111;
+    --run-discipline     : #802316;
+    --throw-discipline   : #467879;
+    --jump-discipline    : #BD8D3E;
+    --font-color-white   : #ffffff;
+    --font-color-black   : #111111;
+    --font-color-mute    : #C3C3C3;
+    --medal-color-gold   : #E8BC2B;
+    --medal-color-silver : #A5A5A5;
+    --medal-color-bronze : #E18341;
+    --font-weight-bold   : 700;
+    --font-weight-medium : 500;
+    --font-weight-regular: 400;
+    --font-weight-light  : 300;
+    --font-size-h1       : 55px;
+    --font-size-h2       : 50px;
+    --font-size-h3       : 30px;
+    --font-size-p        : 18px;
+    --font-size-social   : 25px;
+    --font-size-footer   : 16px;
+}
+
+* {
+    margin         : 0;
+    padding        : 0;
+    box-sizing     : border-box;
+    outline        : none;
+    border         : none;
+    text-decoration: none;
+}
+
+html {
+    font-family    : 'Montserrat', Helvetica, sans-serif;
+    overflow-x     : hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+}
+
+h1 {
+    font-size     : var(--font-size-h1);
+    font-weight   : var(--font-weight-bold);
+    color         : var(--font-color-white);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size     : var(--font-size-h2);
+    font-weight   : var(--font-weight-medium);
+    color         : var(--font-color-black);
+    text-transform: uppercase;
+}
+
+p {
+    font-size  : var(--font-size-p);
+    font-weight: var(--font-weight-regular);
+    color      : var(--font-color-white);
+}
+
+a {
+    font-size     : var(--font-size-a);
+    font-weight   : var(--font-weight-medium);
+    color         : var(--font-color-white);
+    text-transform: uppercase;
+}
+
+.header {
+    width          : 100%;
+    margin         : auto;
+    background     : transparent;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    padding        : 1.5rem 7%;
+    position       : absolute;
+    top            : 0;
+    left           : 0;
+    right          : 0;
+    z-index        : 1000;
+}
+
+.header .logo {
+    font-weight: var(--font-weight-bold);
+}
+
+.header .navbar {
+    position: absolute;
+    right   : 5%;
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+}
+
+.header .navbar a:hover {
+    border-bottom : .1rem solid var(--font-color-white);
+    padding-bottom: .5rem;
+}
+
+.header .icon div {
+    color    : var(--font-color-white);
+    cursor   : pointer;
+    font-size: var(--font-size-a);
+}
+
+#menu-btn {
+    display: none;
+}
+
+#index {
+    background-color: var(--main-color);
+}
+
+.index {
+    min-height         : 100vh;
+    background         : url(../img/damian-warner-web.png) no-repeat;
+    background-size    : cover;
+    background-position: center;
+}
+
+.index .content {
+    max-width: 30rem;
+    position : absolute;
+    top      : 30%;
+    left     : 60%;
+}
+
+.btn {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    width          : 200px;
+    height         : 59px;
+}
+
+.btn:hover {
+    width     : 300px;
+    transition: .1s linear;
+}
+
+.sponsor {
+    width             : 65%;
+    background        : var(--font-color-white);
+    border-radius     : 20px;
+    display           : flex;
+    align-items       : center;
+    justify-content   : space-around;
+    flex-wrap         : wrap;
+    position          : absolute;
+    top               : 93%;
+    left              : 15%;
+    box-shadow        : 3px 6px 15px 0px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 3px 6px 15px 0px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow   : 3px 6px 15px 0px rgba(0, 0, 0, 0.7);
+}
+
+.sponsor img {
+    width  : 150px;
+    padding: 1rem;
+}
+
+.discipline {
+    width     : 80%;
+    margin    : auto;
+    margin-top: 12rem;
+    text-align: center;
+}
+
+.discipline p {
+    color         : var(--font-color-black);
+    text-transform: none;
+    margin-bottom : 40px;
+}
+
+.discipline .content {
+    display    : flex;
+    flex-wrap  : wrap;
+    align-items: center;
+}
+
+.athletic {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    margin        : 30px auto;
+}
+
+.athletic .btn {
+    width      : 360px;
+    margin-top : 20px;
+    padding    : 20px;
+    color      : var(--main-color);
+    border     : 2px solid var(--main-color);
+    font-weight: var(--font-weight-bold);
+}
+
+.athletic .athletic-content {
+    width          : 360px;
+    height         : 320px;
+    display        : flex;
+    align-items    : center;
+    justify-content: start;
+}
+
+.athletic .athletic-content img {
+    width: 60%;
+}
+
+.athletic .athletic-content .info p {
+    text-align: left;
+    margin    : 10px;
+}
+
+#run {
+    background: var(--run-discipline);
+}
+
+#throw {
+    background: var(--throw-discipline);
+}
+
+#jump {
+    background: var(--jump-discipline);
+}
+
+.location {
+    margin-top: 12rem;
+    text-align: center;
+}
+
+.location h2 {
+    margin-bottom: 60px;
+}
+
+.location .content {
+    width              : 100vw;
+    height             : 548px;
+    background-image   : url(../img/san-siro-gradient.png);
+    background-size    : cover;
+    background-position: center;
+    display            : flex;
+    flex-direction     : column;
+    align-items        : center;
+    justify-content    : flex-end;
+}
+
+.location-info {
+    width        : 80%;
+    margin-bottom: 50px;
+    text-align   : justify;
+}
+
+.location-info h3 {
+    padding   : 20px;
+    text-align: center;
+    font-size : var(--font-size-h3);
+    color     : var(--font-color-white);
+}
+
+.location-info p {
+    text-transform: none;
+    margin-bottom : 20px;
+}
+
+#more-info {
+    display: none;
+}
+
+.location-info .active {
+    display: block;
+}
+
+.footer {
+    width          : 100%;
+    height         : 300px;
+    background     : var(--main-color);
+    margin-top     : 15rem;
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-between;
+}
+
+.footer p {
+    margin: 5px;
+    font-size  : var(--font-size-footer);
+}
+
+.footer .content {
+    width          : 70%;
+    margin         : 30px auto;
+    display        : flex;
+    align-items    : flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.footer .content .help {
+    width    : 234px;
+    height   : 131px;
+    display  : flex;
+    flex-wrap: wrap;
+}
+
+.help-title {
+    font-weight: var(--font-weight-bold);
+}
+
+.help-links{
+    display: flex;
+    text-align: left;
+}
+
+.comunication p:not(.help-title),
+.help-links a {
+    text-transform: capitalize;
+    font-weight: var(--font-weight-light);
+}
+
+.footer .content .social {
+    color    : var(--font-color-white);
+    font-size: var(--font-size-social);
+}
+
+.footer .content .social div {
+    padding: 10px;
+}
+
+.footer .copyright {
+    width          : 70%;
+    margin         : 20px auto;
+    padding-top    : 25px;
+    border-top     : 1px solid var(--font-color-mute);
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+.copyright .terms p {
+    display: inline-block;
+}

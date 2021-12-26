@@ -1,0 +1,345 @@
+.secondary-link {
+    color: var(--font-color-black);
+}
+
+.confirmacion-title {
+    color: #111;
+}
+
+.header .navbar .secondary-link:hover {
+    border-bottom : .1rem solid var(--font-color-black);
+    padding-bottom: .5rem;
+}
+
+.header .icon .secondary-icon {
+    color: var(--font-color-black);
+}
+
+.form {
+    position       : absolute;
+    top            : 0;
+    width          : 100%;
+    height         : 100vh;
+    padding        : 8rem;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: baseline;
+}
+
+.form__content {
+    width          : 80%;
+    margin         : 0 auto;
+    display        : flex;
+    justify-content: center;
+}
+
+.form__content-inputs-left,
+.form__content-inputs-rigth {
+    width : 50%;
+    margin: 10px;
+}
+
+input,
+select {
+    width    : 100%;
+    height   : 40px;
+    margin   : 20px 5px;
+    padding  : 8px;
+    border   : 1px solid var(--main-color);
+    font-size: var(--font-size-p);
+    color    : var(--font-color-black);
+}
+
+textarea {
+    width    : 100%;
+    height   : 200px;
+    margin   : 20px 5px;
+    padding  : 8px;
+    border   : 1px solid var(--main-color);
+    font-size: var(--font-size-p);
+    color    : var(--font-color-black);
+}
+
+.secondary-text {
+    color         : var(--font-color-black);
+    text-transform: uppercase;
+}
+
+.date {
+    max-width      : 100%;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+.date input {
+    padding   : 0;
+    text-align: center;
+}
+
+.submit-wrapper {
+    position : relative;
+    width    : 100%;
+    height   : 40px;
+    border   : 1px solid var(--main-color);
+    transform: translate(10px, 25px);
+}
+
+.submit {
+    position        : absolute;
+    background-color: var(--main-color);
+    color           : var(--font-color-white);
+    text-transform  : uppercase;
+    cursor          : pointer;
+    transform       : translate(-10px, -25px);
+    text-align      : left;
+    padding         : 0 30px;
+}
+
+.fa-arrow-right {
+    position: absolute;
+    z-index : 10;
+    color   : var(--font-color-white);
+    top     : 8px;
+    right   : 15px;
+}
+
+.submit-wrapper-contact {
+    position : relative;
+    width    : 30%;
+    height   : 40px;
+    border   : 1px solid var(--main-color);
+    transform: translate(10px, 25px);
+}
+
+textarea::-webkit-input-placeholder {
+    font-family: 'Montserrat';
+    font-weight: var(--font-weight-medium);
+}
+
+textarea:-moz-placeholder {
+    /* Firefox 18- */
+    font-family: 'Montserrat';
+    font-weight: var(--font-weight-medium);
+}
+
+textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    font-family: 'Montserrat';
+    font-weight: var(--font-weight-medium);
+}
+
+textarea:-ms-input-placeholder {
+    font-family: 'Montserrat';
+    font-weight: var(--font-weight-medium);
+}
+
+textarea::placeholder {
+    font-family: 'Montserrat';
+    font-weight: var(--font-weight-medium);
+}
+
+
+.participants {
+    width         : 80%;
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    align-items   : center;
+}
+
+.radio-group {
+    width          : fit-content;
+    margin         : 2rem;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    box-shadow     : 0 3px 6px rgb(0 0 0 / 50%);
+    border-radius  : 20px;
+}
+
+.participants-radio {
+    appearance      : none;
+    text-align      : center;
+    align-items     : center;
+    background-color: transparent;
+    margin          : 0;
+    color           : currentColor;
+    width           : auto;
+    height          : auto;
+    border          : none;
+    cursor          : pointer;
+}
+
+.participants-radio::before {
+    transition-duration       : 3s;
+    transition-timing-function: ease-in;
+    content                   : "";
+    padding                   : 7px 20px;
+    font-size                 : 1.6rem;
+    color                     : #D3D3CD;
+    transition                : 120ms color ease-in-out;
+}
+
+.participants-radio:checked::before {
+    color: var(--font-color-black);
+}
+
+.radio-run::before {
+    content: 'Carrera';
+}
+
+.radio-throw::before {
+    content: 'Lanzamiento';
+}
+
+.radio-jump::before {
+    content: 'Salto';
+}
+
+.radio-group-test {
+    width          : 100%;
+    margin         : -1rem;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.label-test {
+    padding    : 0 1.2rem;
+    display    : flex;
+    align-items: center;
+    cursor     : pointer;
+}
+
+.test {
+    transform: scale(.5);
+}
+
+.table {
+    width : 100%;
+    margin: 2rem;
+}
+
+.table-participants {
+    width        : 80%;
+    margin       : 0 auto;
+    border-radius: 20px;
+    box-shadow   : 0 3px 6px rgb(0 0 0 / 50%);
+}
+
+.table-title {
+    text-transform: uppercase;
+    font-weight   : 900;
+}
+
+.table-row {
+    width          : 100%;
+    margin         : 0 auto;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+.table-row:nth-child(2n) {
+    background-color: #D3D3CD;
+}
+
+.table-row:last-child {
+    border-radius: 0 0 20px 20px;
+}
+
+.column {
+    width          : 22%;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    margin         : .5rem 0;
+}
+
+.column:nth-child(3) {
+    display        : flex;
+    align-items    : center;
+    justify-content: start;
+    text-align: center;
+}
+
+.column:nth-child(3) img {
+    margin-right: 5%;
+    margin-left : 10%;
+}
+
+.column i {
+    margin: 0 .5rem;
+    cursor: pointer;
+}
+
+.column .flag {
+    width       : 25px;
+    margin-right: .4rem;
+}
+
+.fa-trash-alt,
+.fa-user-edit {
+    color: #111;
+}
+
+.secondary-footer {
+    position: absolute;
+    bottom  : -5%;
+}
+
+.form-delete {
+    height: auto;
+}
+
+.form-delete,
+.footer_relative {
+    position: relative;
+}
+
+.container-delete {
+    position  : fixed;
+    top       : 0;
+    left      : 0;
+    right     : 0;
+    bottom    : 0;
+    background: #000;
+    text-align: center;
+}
+
+.delete__centered {
+    padding       : 5px;
+    background    : #eee;
+    border-radius : 5px;
+    display       : inline-block;
+    vertical-align: middle;
+    max-width     : 600px;
+    margin        : 10px;
+}
+
+.container-delete:before {
+    content       : "";
+    display       : inline-block;
+    width         : 0;
+    height        : 100%;
+    vertical-align: middle;
+}
+
+.delete_centered-inputs {
+    margin-right: 5px;
+}
+
+.delete {
+    border        : 2px solid #ff3333;
+    color         : #ff3333;
+    cursor        : pointer;
+    text-transform: uppercase;
+    transition    : background-color .5s ease-in-out, color .5s ease-in-out;
+}
+
+.delete:hover {
+    background-color: #ff3333;
+    color           : #fff;
+}

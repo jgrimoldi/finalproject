@@ -1,0 +1,192 @@
+@media (max-width: 991px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header .navbar {
+        display: none;
+        top    : 100%;
+        right  : -100%;
+    }
+
+    .header .active {
+        background: var(--font-color-white);
+        display   : block;
+        right     : 0%;
+    }
+
+    .header .navbar a {
+        display   : block;
+        color     : var(--font-color-black);
+        text-align: right;
+        margin    : 1.5rem;
+        padding   : .5rem;
+    }
+
+    .discipline {
+        margin-top: 20rem;
+    }
+
+    .sponsor {
+        left: 20%;
+    }
+
+    .footer {
+        height: 350px;
+    }
+
+    .form {
+        position: relative;
+    }
+
+    .form__content {
+        flex-wrap: wrap;
+    }
+
+    .form__content-inputs-left,
+    .form__content-inputs-rigth {
+        width: 100%;
+    }
+
+    .table-participants {
+        width: 100%;
+    }
+
+    .radio-group {
+        width : 100%;
+        margin: 1.5rem 0;
+    }
+
+    .test {
+        transform: scale(1);
+    }
+
+    .secondary-footer {
+        position: relative;
+    }
+
+    .submit-wrapper-contact {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .index {
+        background-position: bottom;
+        background-size    : 200%;
+    }
+
+    .index .content {
+        top : 10%;
+        left: 30%;
+    }
+
+    .discipline {
+        margin-top: 25rem;
+    }
+
+    #more-info {
+        display: block;
+        cursor : pointer;
+    }
+
+    .info-stadium {
+        display: none;
+    }
+
+    .w-100 {
+        width  : 100%;
+        padding: 8rem 0 5rem;
+        height: inherit;
+    }
+
+    .label-test,
+    .participants-radio::before {
+        font-size: 14px;
+    }
+
+    .column {
+        font-size: 14px;
+    }
+
+    .footer {
+        height: 400px;
+    }
+
+    .footer .copyright {
+        width          : 100%;
+        flex-wrap      : wrap;
+        justify-content: center;
+    }
+
+}
+
+@media(max-width: 600px) {
+    .index .content {
+        top : 20%;
+        left: 5%;
+    }
+
+    .athletic .btn {
+        width: 320px;
+    }
+
+    .athletic .athletic-content {
+        width : 320px;
+        height: 230px;
+
+    }
+
+    .athletic .athletic-content img {
+        width: 50%;
+    }
+
+    .discipline {
+        width: auto;
+    }
+
+    .test {
+        transform: scale(1);
+    }
+
+    .table {
+        width: 120%;
+        margin: 2rem 0;
+    }
+
+    .column{
+        width: 100%;
+    }
+
+    .form {
+        padding: 8rem 0 2rem;
+    }
+
+    .secondary-title {
+        font-size: 30px;
+    }
+
+    .footer {
+        height         : 470px;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 465px) {
+    .sponsor {
+        width: 75%;
+        left : 12.5%;
+    }
+
+    .sponsor img {
+        width: 120px;
+    }
+
+    .test {
+        transform: scale(1);
+    }
+
+    .footer {
+        height: 550px;
+    }
+}
