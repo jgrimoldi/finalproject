@@ -2,7 +2,8 @@
 
 include 'conect.php';
 $id = $_GET['id'];
-$url = 'http://localhost/php/confirmation.php';
+$url = 'https://finalprojectcac.000webhostapp.com/php/confirmation.php';
+
 
 $query_select = "SELECT `name`, `email`, `password` FROM `users` WHERE `id_user`= '$id'";
 $run_select = mysqli_query($conection, $query_select);

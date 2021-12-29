@@ -5,7 +5,8 @@ if (isset($_POST['submit'])) {
     $surname = $_POST['surname'];
     $email = $_POST['email'];
     $text = $_POST['message'];
-    $url = 'http://localhost/php/confirmation.php';
+    $url = 'https://finalprojectcac.000webhostapp.com/php/confirmation.php';
+
 
     if (!empty($name) && !empty($surname) && !empty($email) && !empty($text)) {
         sendMail($name, $surname, $email, $text, $url);
@@ -28,11 +29,9 @@ function sendMail($name, $surname, $email, $text, $url)
     $success = mail($to, $subject, $message, $header);
 
     if ($success) {
-        header('Location:' . $url . 'thanks/' . $name . '-' . $surname);
+        header('Location:' . $url . '/?confirmation=Gracias' . $name . '-' . $surname);
     } else {
         $errorMessage = error_get_last()['message'];
-        header('Location:' . $url . 'error/' . $errorMessage);
+        header('Location:' . $url . '/?confirmation=Error:'. "<br>" . $errorMessage);
     }
 }
-
-?>

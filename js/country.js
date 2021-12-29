@@ -252,7 +252,9 @@ const countries = [
 ];
 
 let options = "";
+let i = 0;
 countries.forEach(country => {
-    options += `<option value="${country}">${country}</option>`;
+    i++;
+    options += `<option value="${i}">${country}</option>`;
 });
 select.innerHTML = options;

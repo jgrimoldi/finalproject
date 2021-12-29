@@ -1,13 +1,13 @@
 <?php
 
 include 'conect.php';
-$url = 'http://localhost/php/confirmation.php';
+$url = 'https://finalprojectcac.000webhostapp.com/php/confirmation.php';
 
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $surname = $_POST['surname'];
     $name_surname = $name . ' ' . $surname;
-    $birth_date = $_POST['day'] . '/' . $_POST['month'] . '/' . $_POST['year'];
+    $birth_date =  $_POST['year'] . '/' . $_POST['month'] . '/' . $_POST['day'];
     $email = $_POST['email'];
     $citizenship = $_POST['countries'];
     $discipline = $_POST['discipline'];
@@ -17,20 +17,19 @@ if (isset($_POST['submit'])) {
         $password_hash = password_hash($password, PASSWORD_DEFAULT);
         $verify_email = mysqli_query($conection, "SELECT * FROM users WHERE email ='$email' ");
         if (mysqli_num_rows($verify_email) > 0) {
-            header('Location:' . $url . '/?confirmation=Error:'. "<br>" . 'El+correo+que+intenta+registrar+ya+se+encuentra+utlizado');
+            header('Location:' . $url . '/?confirmation=Error:' . "<br>" . 'El+correo+que+intenta+registrar+ya+se+encuentra+utlizado');
         } else {
-            $query_insert = "INSERT INTO `users`(`name`, `birth`, `citizenship`, `discipline`, `discipline_type`, `email`, `password`) 
-            VALUES ('$name_surname','$birth_date','$citizenship','$discipline','$discipline_type', '$email','$password_hash')";
+            $query_insert = "INSERT INTO `users` (`name`, `birth`, `citizenship`, `discipline`, `discipline_type`, `email`, `password`) VALUES ('$name_surname','$birth_date','$citizenship','$discipline','$discipline_type', '$email','$password_hash')";
             $run_query = mysqli_query($conection, $query_insert);
             if ($run_query) {
                 send_mail($email, $name_surname, $password);
-                header('Location:' . $url . '/?confirmation='. $name_surname .'!'. "<br>" . '+Se+ha+registrado+correctamente');
+                header('Location:' . $url . '/?confirmation=' . $name_surname . '!' . "<br>" . '+Se+ha+registrado+correctamente');
             } else {
-                header('Location:' . $url . '/?confirmation=Error:'. "<br>" . 'Ocurrio+un+problema+al+registrarse');
+                header('Location:' . $url . '/?confirmation=Error:' . "<br>" . 'Ocurrio+un+problema+al+registrarse');
             }
         }
     } else {
-        header('Location:' . $url . '/?confirmation=Error:'. "<br>" . 'Uno+de+las+campos+estaba+vacio');
+        header('Location:' . $url . '/?confirmation=Error:' . "<br>" . 'Uno+de+las+campos+estaba+vacio');
     }
 }
 

@@ -1,7 +1,7 @@
 <?php
 
 include 'conect.php';
-$url = 'http://localhost/php/confirmation.php';
+$url = 'https://finalprojectcac.000webhostapp.com/php/confirmation.php';
 
 if (isset($_POST['submit'])) {
     $id_user = $_POST['id_user'];

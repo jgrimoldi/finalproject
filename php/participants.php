@@ -78,7 +78,7 @@ include '../actions/data.php';
                             <div class="table-row">
                                 <div class="column "><?php echo $i; ?></div>
                                 <div class="column"><?php echo $row_select['name']; ?></div>
-                                <div class="column"> <img class="flag" src="/img/flags/<?php echo  $row_select['citizenship']['code']; ?>" alt="Bandera de <?php echo $row_select['citizenship']; ?>"> <?php echo $row_select['citizenship']; ?></div>
+                                <div class="column"> <img class="flag" src="/img/flags/<?php echo  $row_select['code'] ?>.png" alt="Bandera de <?php echo $row_select['countryname']; ?>"> <?php echo $row_select['countryname']; ?></div>
                                 <div class="column"><?php echo $row_select['discipline']; ?></div>
                                 <div class="column "><a href="update.php/?id=<?php echo $row_select['id_user'] ?>"><i class="fas fa-user-edit"></i></a><a href="/actions/delete.php/?id=<?php echo $row_select['id_user'] ?>"><i class="fas fa-trash-alt"></i></a></div>
                             </div>
